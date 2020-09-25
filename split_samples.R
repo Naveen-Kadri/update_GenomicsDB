@@ -11,7 +11,7 @@ while (n >0) {
     batch  <- batch+1
     mysamp <- samples [1:batch_size]
     mysamp  <- mysamp [!is.na (mysamp)]
-    write.table (outfiles[batch], paste0("sample_batch_", batch, ".txt"),col.names=F,row.names=F,quote=F)
+    write.table (mysamp, out_files[batch], col.names=F,row.names=F,quote=F)
     samples<- samples [-c(1:batch_size)]
     
     n  <- length(samples)
