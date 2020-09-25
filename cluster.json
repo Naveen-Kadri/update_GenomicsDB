@@ -1,0 +1,24 @@
+{
+    "create_genomicsDB":
+    {
+	"jobname" : "{rule}_{wildcards.chr}",
+	"logi" : "loglsf/{rule}_{wildcards.chr}.log",
+        "ncore" : 1,
+        "memo" : 48000,
+        "jobtime" : "04:00",
+	"scratch" : 100000
+    },
+
+    "update_genomicsDB":
+    {
+	"jobname" : "{rule}_{wildcards.chr}_{wildcards.batch}",
+	"logi" : "loglsf/{rule}_{wildcards.chr}_{wildcards.batch}.log",
+        "ncore" : 1,
+        "memo" : 48000,
+        "jobtime" : "04:00",
+	"scratch" : 100000
+    }
+
+
+    
+}
